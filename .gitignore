@@ -1,0 +1,5 @@
+# Ignore all build directories in all subdirectories
+*/build/
+*.vscode
+.vscode
+*/.vscode/
