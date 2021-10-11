@@ -1,6 +1,6 @@
 #ifndef ARGPARSER_HPP //only if argparser component has not already been included
 #define ARGPARSER_HPP //add the argparser header
-namespace mc2d{
+namespace mc1d{
     class ArgParser{
         public:
             ArgParser(int argc,char* argv[]);
@@ -17,7 +17,7 @@ namespace mc2d{
             float m_absorption;
             int m_nparticles;
             int m_startposition;
-            int m_scatter;
+            float m_scatter;
     };
 
 

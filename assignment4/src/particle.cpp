@@ -1,7 +1,7 @@
 #include "particle.hpp"
 #include <iostream>
 
-namespace mc2d{
+namespace mc1d{
     particle::particle(int argc,char* argv[]) { //i dont understand this formatting
         //controlling input for command line arguments
         m_alive = true;

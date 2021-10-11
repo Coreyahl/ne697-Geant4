@@ -1,6 +1,6 @@
 #ifndef PARTICLE_HPP
 #define PARTICLE_HPP
-namespace mc2d{
+namespace mc1d{
     class particle{
         public:
             particle(int argc,char* argv[]);
