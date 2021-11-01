@@ -1,0 +1,8 @@
+/run/initialize
+#
+# change beta source
+#
+/gun/particle ion
+/gun/ion 9 18
+#
+/run/beamOn 100000

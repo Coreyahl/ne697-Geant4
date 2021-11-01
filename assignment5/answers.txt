@@ -1,0 +1,230 @@
+#COREY AHL
+#NE697
+#Geant4
+#Assignment 5 Answer sheet
+#
+#Example B1
+#
+1a)  Dose = 252.613 picoGy
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 252.613 picoGy  rms = 2.47294 picoGy 
+     ------------------------------------------------------------
+#
+2a)  Dose = 174.309 picoGy
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 174.309 picoGy  rms = 4.82425 picoGy 
+     ------------------------------------------------------------
+#
+3a)  Dose = 0.344832 picoGy
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 0.344832 picoGy  rms = 0.0667069 picoGy 
+     ------------------------------------------------------------
+#
+4a)  Comparing the dose of this run to the previous one (1a), the dose increased after
+     cutting the dimensions of the trapezoid in half. I suspect that the trapezoid is still 
+     sufficiently large enough to stop a vast majority of the photons even though the size 
+     is reduced. So, with a smaller mass, and the Edep being nearly identical, dose would 
+     increase slightly, given the relationship Dose = Edep/mass. Another factor is particle
+     trajectory and columnation, given that the target volume is smaller, the number of
+     particles incident on the trapezoid could play a large factor, too. 
+
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 266.476 picoGy  rms = 6.61582 picoGy 
+     ------------------------------------------------------------
+#
+5a)  The dose remained the same (aside from slight variations due to the nature of
+     monte carlo simulations. This is expected because the scoring volume (trapezoid)
+     was not changed, and the scoring volume is that which we are calculating the dose within.
+     Even though the particles do go through the sphere (previously a cone) before
+     the scoring volume, the difference in attenuation of photons between the sphere and cone 
+     was insignificant. We would a much larger sphere, or much smaller sphere to have an larger 
+     impact on dose within the scoring volume due to more or less attenuation.
+     ***it is important to note that the dose here is being compared to the dose of the prevous
+     problem (4a), because all parameters are the same except shape 1 geometry.
+
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 267.874 picoGy  rms = 6.65871 picoGy 
+     ------------------------------------------------------------
+#
+6a)  The end result prints the dose, and the mass of the scoring volume, seen below.
+     The mass is 216.45  g.
+
+     --------------------End of Global Run-----------------------
+      The run consists of 100000 
+      Cumulated dose per run, in scoring volume : 267.874 picoGy  rms = 6.65871 picoGy 
+      Mass of the scoring volume : 216.45 g 
+     ------------------------------------------------------------
+###########################################################################################
+###########################################################################################
+#
+#Example B3b
+#
+1a)   12585 usable annihilations
+
+     --------------------End of Global Run-----------------------
+      The run was 100000 events ; Nb of 'good' e+ annihilations: 12585
+      Total dose in patient : 3.06477 nanoGy 
+      Total dose in patient : 3.06477e-09 [sigma: 1.75229e-14 | error: 0.00180804 | coeff: 0.00180804 | 
+      eff: 1 | fom: 20393.6 | r2int: 3.26897e-06 | r2eff: 0 | hits: 100000 ] Gy
+     ------------------------------------------------------------
+#
+2a)    The NaI material has less 'good' e+ annihilation events due to the efficiency of the detector.
+       NaI has a density of about 3.7 g/cm^3, while LSO has a density of 7.4 g/cm3 as defined 
+       in the program. Aside from traditional density, the electron density plays a very large 
+       role in a materials ability to attenuate, or stop photons... aka, photon detection 
+       efficiency. Basically, LSO stops photons much more efficiently than NaI.
+
+     --------------------End of Global Run-----------------------
+      The run was 100000 events ; Nb of 'good' e+ annihilations: 2782
+      Total dose in patient : 3.06344 nanoGy 
+      Total dose in patient : 3.06344e-09 [sigma: 1.7488e-14 | error: 0.00180522 | 
+      coeff: 0.00180522 | eff: 1 | fom: 23604.6 | r2int: 3.25878e-06 | r2eff: 0 | 
+      hits: 100000 ] Gy
+     ------------------------------------------------------------
+#
+3)   The energy threshold is 500 keV. This is defined in B3bRun.cc on line 86.
+      See code below.
+        //Energy in crystals : identify 'good events'
+        //
+        const G4double eThreshold = 500*keV;
+      ***Line 95 also shows the if statement, for if edep > eThreshold, it does something.
+      This nbOfFired++ statement is not quite understood, but it appears to be 500 keV nonetheless.
+#
+4a)    Comparing the number of good e+ annihilations and the dose shows that they are almost identical.
+       This is not surprising, and actually expected. While the activity of the two may be different,
+       we are not running the simulation for a given "time"... we are running for number of events, so
+       we get 100,000 events, regardless of the source. While there may also be differences in the primary
+       particle (e+) energy, that is also irrelevant. Every e+ particle will stop within the sufficiently
+       large volume in which it is created, and each e+ annihilation results in the same, anticoincident
+       511 keV gammas, regardless of where the e+ particles originate from.
+
+     --------------------End of Global Run-----------------------
+      The run was 100000 events ; Nb of 'good' e+ annihilations: 2782
+      Total dose in patient : 3.06344 nanoGy 
+      Total dose in patient : 3.06344e-09 [sigma: 1.7488e-14 | error: 0.00180522 | coeff: 0.00180522 | 
+      eff: 1 | fom: 25571.7 | r2int: 3.25878e-06 | r2eff: 0 | hits: 100000 ] Gy
+     ------------------------------------------------------------
+#
+#######################################################################################
+#######################################################################################
+#
+#Example OpNovice
+#
+1a)   There were 67.3 +/- 8.78 scintillation photons created per event
+      
+      ======================== run summary ======================
+       Primary particle was: e+ with energy 500 keV.
+       Number of events: 1000
+       Average number of Cerenkov photons created per event: 16.6 +- 6.11
+       Average number of scintillation photons created per event: 67.3 +- 8.78
+       Average number of optical Rayleigh interactions per event: 7.88 +- 3.12
+       Average number of optical absorption interactions per event: 35.2 +- 6.45
+       Average number of optical Mie interactions per event: 0.102 +- 0.319
+       Average number of optical boundary interactions per event: 144 +- 26.8
+#
+2a)   21.9 +/- 4.8 scintillation photons per event
+2b)   9.36 +/- 3.16 absorption interactions per event
+      About 1/3 of what was seen with primary particle e+
+      
+      ======================== run summary ======================
+      Primary particle was: gamma with energy 511 keV.
+      Number of events: 1000
+      Average number of Cerenkov photons created per event: 0.426 +- 1.32
+      Average number of scintillation photons created per event: 21.9 +- 4.8
+      Average number of optical Rayleigh interactions per event: 2.17 +- 1.65
+      Average number of optical absorption interactions per event: 9.36 +- 3.16
+      Average number of optical Mie interactions per event: 0.026 +- 0.159
+      Average number of optical boundary interactions per event: 37.9 +- 12.1
+
+#
+3)    The scintillation yield is 50 photons/MeV
+      ***code below from OpNoviceDetectorConstruction.cc line 140
+      myMPT1->AddConstProperty("SCINTILLATIONYIELD", 50. / MeV);
+#
+4)    Fast time constants of the scintillator is 1 ns, while the slow time constant is 10 ns.
+      ***see code below from OpNoviceDetectorConstruction.cc Lines 142 and 143
+      myMPT1->AddConstProperty("FASTTIMECONSTANT", 1. * ns);
+      myMPT1->AddConstProperty("SLOWTIMECONSTANT", 10. * ns);
+      ***However, the fast component appears to be multiplied by 1 regardless of photon energy,
+        whereas the slow component has a multiplier that varies with photon energy,
+        see OpNoviceDetectorConstruction.cc Lines 118-127 with Lines 135 and 137
+#
+5a)    There were many more absorption interactions per event after reducing the absorption length
+       to 1 mm at all energies. It increased from 35.2 to 83.4 absorptions per event. This is
+       what I expected to happen. If I think of an absorption length to be analogous
+       of an attenuation length, then I would assume that a shorter absorption length would result
+       in more absorptions per unit length. This is what occurred.
+
+       The terminal prints the absorption lengths to the terminal, and they can be seen below to 
+       confirm that they were all set to 1 mm. The results from 1a and 5a are both printed below
+       as well, for reference and comparison.
+
+16: ABSLENGTH
+2.034e-06   1
+2.068e-06   1
+2.103e-06   1
+2.139e-06   1
+2.177e-06   1
+2.216e-06   1
+2.256e-06   1
+2.298e-06   1
+2.341e-06   1
+2.386e-06   1
+2.433e-06   1
+2.481e-06   1
+2.532e-06   1
+2.585e-06   1
+2.64e-06   1
+2.697e-06   1
+2.757e-06   1
+2.82e-06   1
+2.885e-06   1
+2.954e-06   1
+3.026e-06   1
+3.102e-06   1
+3.181e-06   1
+3.265e-06   1
+3.353e-06   1
+3.446e-06   1
+3.545e-06   1
+3.649e-06   1
+3.76e-06   1
+3.877e-06   1
+4.002e-06   1
+4.136e-06   1
+ 
+       *******results after changing absorption length to 1mm for all energies
+        ======================== run summary ======================
+       Primary particle was: e+ with energy 500 keV.
+       Number of events: 1000
+       Average number of Cerenkov photons created per event: 16.5 +- 5.6
+       Average number of scintillation photons created per event: 67 +- 8.01
+       Average number of optical Rayleigh interactions per event: 0 +- 0
+       Average number of optical absorption interactions per event: 83.4 +- 9.89
+       Average number of optical Mie interactions per event: 0 +- 0
+       Average number of optical boundary interactions per event: 0 +- 0
+       
+       ********previous run from number 1, before changing absorption lengths to 1 mm
+       ======================== run summary ======================
+       Primary particle was: e+ with energy 500 keV.
+       Number of events: 1000
+       Average number of Cerenkov photons created per event: 16.6 +- 6.11
+       Average number of scintillation photons created per event: 67.3 +- 8.78
+       Average number of optical Rayleigh interactions per event: 7.88 +- 3.12
+       Average number of optical absorption interactions per event: 35.2 +- 6.45
+       Average number of optical Mie interactions per event: 0.102 +- 0.319
+       Average number of optical boundary interactions per event: 144 +- 26.8
+
+
+
+
+
+
+
+
+

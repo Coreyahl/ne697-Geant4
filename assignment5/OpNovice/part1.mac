@@ -1,0 +1,9 @@
+/control/verbose 0
+/tracking/verbose 0
+/tracking/verbose 0
+/run/verbose 0
+/process/optical/verbose 0
+/control/cout/ignoreThreadsExcept 0
+#
+/run/initialize
+/run/beamOn 1000

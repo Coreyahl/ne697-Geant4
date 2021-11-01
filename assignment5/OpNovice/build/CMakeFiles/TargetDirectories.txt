@@ -1,0 +1,7 @@
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/install/strip.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/install/local.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/install.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/list_install_components.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/rebuild_cache.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/edit_cache.dir
+/home/corey/Documents/ne697/assignment5/OpNovice/build/CMakeFiles/OpNovice.dir
