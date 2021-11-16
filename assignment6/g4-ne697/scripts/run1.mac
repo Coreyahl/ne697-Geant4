@@ -1,0 +1,4 @@
+/run/initialize
+/gun/energy 5 MeV
+/run/beamOn 100000
+
