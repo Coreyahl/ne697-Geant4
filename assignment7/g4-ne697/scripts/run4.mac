@@ -1,0 +1,4 @@
+/run/initialize
+/ne697/gun/offset 0 50 0 cm
+/ne697/run/save_path hits4.csv
+/run/beamOn 100000

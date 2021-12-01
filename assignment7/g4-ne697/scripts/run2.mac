@@ -1,0 +1,4 @@
+/ne697/geometry/det_size 50 1 50 cm
+/run/initialize
+/ne697/run/save_path hits2.csv
+/run/beamOn 100000

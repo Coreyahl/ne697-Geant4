@@ -1,0 +1,4 @@
+/run/initialize
+/gun/energy 300 keV
+/ne697/run/save_path hits5.csv
+/run/beamOn 100000
