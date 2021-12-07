@@ -1,0 +1,6 @@
+/ne697/geometry/det_offset 0 0 0.15 cm
+/run/initialize
+/gun/ion 95 241
+/ne697/gun/offset 0 0 0.15 cm
+/ne697/run/save_path hits2.csv
+/run/beamOn 100000
